@@ -26,12 +26,12 @@ namespace VueClassValidation
     // This method gets called by the runtime. Use this method to add services to the container.
     public void ConfigureServices(IServiceCollection services)
     {
-      services.AddDbContext<ShowContext>(cfg =>
+      services.AddDbContext<CustomerContext>(cfg =>
       {
         cfg.UseSqlServer(Configuration.GetConnectionString("DbServer"));
       });
 
-      services.AddScoped<IShowRepository, ShowRepository>();
+      services.AddScoped<ICustomerRepository, CustomerRepository>();
       services.AddAutoMapper(Assembly.GetEntryAssembly());
 
       services.AddRazorPages();
