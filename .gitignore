@@ -353,5 +353,5 @@ MigrationBackup/
 .ionide/
 
 # ignore dist folders in Vue projects
-**/client/dist/**/*
+**/wwwroot/app/**/*
 

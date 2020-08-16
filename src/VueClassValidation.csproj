@@ -18,7 +18,6 @@
 
   <ItemGroup>
     <Folder Include="client\src\components\" />
-    <Folder Include="client\src\models\" />
   </ItemGroup>
 
 </Project>
