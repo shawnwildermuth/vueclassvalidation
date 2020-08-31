@@ -1,5 +1,12 @@
 ﻿import BaseModel from './BaseModel';
-import { IsDefined, MinLength, Matches, IsPhoneNumber, IsOptional, Length} from 'class-validator';
+import {
+  IsDefined, 
+  MinLength, 
+  Matches, 
+  IsPhoneNumber, 
+  IsOptional, 
+  Length
+} from 'class-validator';
 
 export default class Customer extends BaseModel {
   id = 0;
@@ -16,7 +23,7 @@ export default class Customer extends BaseModel {
   lastName: string | undefined;
 
   @IsOptional()
-  @IsPhoneNumber("US", { message: "Must be a valid phone number"})
+  @IsPhoneNumber("US", { message: "Must be a valid phone number" })
   phoneNumber: string | undefined;
 
   @IsOptional()
@@ -24,15 +31,15 @@ export default class Customer extends BaseModel {
     message: "Must be > 5 characters"
   })
   companyName: string | undefined;
-  
+
   @IsDefined({
     message: "Address is required"
   })
   addressLine1: string | undefined;
-  
+
   addressLine2: string | undefined;
   addressLine3: string | undefined;
-  
+
   @IsDefined({
     message: "City is required"
   })
